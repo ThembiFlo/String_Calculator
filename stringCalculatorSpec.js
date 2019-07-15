@@ -10,11 +10,7 @@ describe("stringCalculator", function(){
       let answer = calculator("1,2")
       expect(answer).toBe(3);
     });
-    it("should return zero when the string is empty", function(){
-      let answer = calculator(" ")
-      expect(answer).toBe(0);
-    });
-    it("should handle unknown amount of numbers", function(){
+    it("should handle more than tw0 numbers", function(){
       let answer = calculator("1,2,3,4")
       expect(answer).toBe(10);
     });
@@ -22,7 +18,7 @@ describe("stringCalculator", function(){
       let answer = calculator("1\n3")
       expect(answer).toBe(4);
     });
-    it("should return a number where the default delimiter is ','", function(){
+    it("should remove the default delimiter and add numbers", function(){
       let answer = calculator("//;\n2;4")
       expect(answer).toBe(6);
     });
