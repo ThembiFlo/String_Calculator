@@ -27,11 +27,11 @@ describe('stringCalculator', function() {
 		expect(answer).toThrow('negatives not allowed');
 	});
 	it('should ignore numbers bigger than 1000', function(){
-		let answer = calculator('2+1001');
+		let answer = calculator('2,1001');
 		expect(answer).toBe(2);
 	});
 	it('should allow multiple delimiters', function(){
 		let answer=calculator('//[*][%]\n1*2%3');
-		expect(answer).toBe(1);
+		expect(answer).toBe(6);
 	});
 });
