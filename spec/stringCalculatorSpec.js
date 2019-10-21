@@ -21,9 +21,7 @@ describe('stringCalculator', function() {
 		expect(answer).toBe(6);
 	});
 	it("should return 'negatives not allowed' when numbers are less than zero", function() {
-		let answer = function() {
-			throw 'negatives not allowed';
-		};
+		let answer = calculator(-5);
 		expect(answer).toThrow('negatives not allowed');
 	});
 	it('should ignore numbers bigger than 1000', function(){

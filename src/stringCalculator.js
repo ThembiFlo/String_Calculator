@@ -14,7 +14,7 @@ function calculator(num) {
 		}
 	}
 	if (answer < 0) {
-		return new Error('negatives not allowed');
+		throw new Error('negatives not allowed');
 	}
 
 	return answer;
